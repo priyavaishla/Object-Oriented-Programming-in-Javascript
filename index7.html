@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index7</title>
+</head>
+<body>
+    <script>
+    class  person{
+        constructor(id,name,address){
+            Object.assign(this,id,name,address);
+        }
+        static compareprice(){
+            console.log("person static method");
+        }
+        drive(){
+            console.log(' person driving');
+        }
+    }
+    
+        
+        class human extends person{
+            constructor(id,name,address){
+                super(id,name,address);
+            }
+            
+            drive(){
+                console.log('human driving');
+            }
+        }
+        
+       console.dir(person); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    
+let mammal  =  function(legs){
+      this.legs  =  legs; 
+      
+   } 
+   
+   mammal.prototype = {
+       walk(){
+           return 'walking';
+       },
+       sleep(){
+           return 'sleeping';
+       }  
+   }
+    
+    
+let bat  = function(legs,isvegitarian){
+ mammal.call(this,legs); 
+    this.isvegitarian = isvegitarian;
+ }  
+ 
+ bat.prototype = Object.create(mammal.prototype);
+ bat.prototype.constructor = bat;
+    
+    console.dir(bat);
+    
+</script>  
+</body>
+</html>

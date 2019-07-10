@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    
+function shape (){
+    this.x =0;
+    this.y =0;
+}
+ shape.prototype.move = function(x,y){
+      this.x += x;
+      this.y += y;
+    console.log(`${this.x} and ${this.y}`);
+     
+}  
+ 
+ console.dir(shape);
+ function Rectangle(){
+     shape.call(this);
+ }
+      
+Rectangle.prototype = Object.create(shape.prototype);
+ 
+      var rect  =  new Rectangle();
+      console.dir(rect);
+       
+  </script>  
+</body>
+</html>
+

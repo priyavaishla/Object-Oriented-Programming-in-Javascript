@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index4</title>
+</head>
+<body>
+<script>
+    
+let toyota  = {
+ drive(){
+     return 'toyota';
+ }   
+}
+
+let camry  = {
+    wifi(){
+        return 'wifi';
+    }
+}
+
+Object.setPrototypeOf(camry,toyota);
+    console.dir(camry);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index6</title>
+</head>
+<body>
+   <script>
+    
+    class car {
+        constructor(name,age){
+            this.name =name;
+        }
+        speed(){
+            console.log('speed');
+        }
+    }
+       
+       
+       
+       class cartio  extends car{
+         constructor(name,age,address)  {
+             super(name,age);
+             this.address = address;
+         }
+           
+           walk(){
+               console.log('walk')
+           }
+           
+           speed(){
+               console.log('ovveride speed');
+           }
+       }
+       
+       
+      
+       
+       let fruitbat  =  new cartio();
+       console.log(fruitbat);
+       
+       
+    </script> 
+</body>
+</html>
